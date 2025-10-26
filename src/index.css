@@ -1,0 +1,56 @@
+@import "tailwindcss";
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 1440px;
+  background: #f7f7fb;
+}
+
+header,
+main,
+footer {
+  width: 100%;
+}
+.hero {
+  position: relative;
+  padding: 48px 16px;
+  background: linear-gradient(180deg, #fbf8ff, #fff);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.1);
+  border-radius: 12px;
+}
+
+.hero .circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+}
+.hero .box {
+  position: absolute;
+  opacity: 0.15;
+}
+.card {
+  color: #fff;
+  background: #2275ad;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+}
+.card:hover {
+  background: #005f99;
+}
+input,
+select,
+button {
+  font: inherit;
+  padding: 5px 8px;
+  border-radius: 8px;
+  border: 1px solid inherit;
+}
+
+@theme {
+  --font-clash-display: "Clash Display", sans-serif;
+  --font-nunito: "Nunito", sans-serif;
+  --font-raleway: "Raleway", sans-serif;
+}
