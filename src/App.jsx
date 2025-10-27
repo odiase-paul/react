@@ -56,7 +56,7 @@ function App() {
           }
         />
       </Routes>
-      <footer className="mt-5 text-center">
+      <footer className="mt-10 text-center">
         © {new Date().getFullYear()} Ticketly
       </footer>
     </div>

@@ -16,7 +16,7 @@ export default function Tickets() {
             Your Tickets
           </h1>
           <Link to="/tickets/new" className="card py-2 px-4 text-center">
-            New Ticket
+            Add New Ticket
           </Link>
         </header>
 
@@ -62,7 +62,9 @@ export default function Tickets() {
               </div>
             </div>
           ))}
-          {tickets.length === 0 && <div className="card">No tickets yet</div>}
+          {tickets.length === 0 && (
+            <div className="text-center">No tickets yet</div>
+          )}
         </div>
       </main>
     </div>

@@ -15,11 +15,11 @@ export function clearSession() {
 }
 export function signup({ username, password, confirmpassword }) {
   if (!username || !password || !confirmpassword)
-    throw new Error("Username, password and confirmpassword required");
+    throw new Error("Username and passwords required");
   const users = JSON.parse(localStorage.getItem(USERS_KEY) || "[]");
   if (users.find((u) => u.username === username))
     throw new Error("User exists");
-  if (password !== confirmpassword) throw new Error("mismatch password");
+  if (password !== confirmpassword) throw new Error("Password doesn't match");
   users.push({ username, password });
   localStorage.setItem(USERS_KEY, JSON.stringify(users));
   return true;
