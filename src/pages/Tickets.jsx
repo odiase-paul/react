@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { loadTickets, saveTickets } from "../utils/storage";
 import { getSession } from "../utils/auth";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
 export default function Tickets() {
   const session = getSession();
   const user = session?.user || "";
@@ -54,6 +55,7 @@ export default function Tickets() {
                       const all = loadTickets().filter((x) => x.id !== t.id);
                       saveTickets(all);
                       setTickets(tickets.filter((x) => x.id !== t.id));
+                      toast.success("Ticket deleted");
                     }
                   }}
                 >
